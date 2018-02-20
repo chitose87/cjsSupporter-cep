@@ -1,12 +1,20 @@
 <!-- src/components/HelloDecorator.vue -->
 <!-- This is an alternative way to define the Hello component using decorators -->
-<template>
-    <div>
-        <div class="greeting">Hello {{name}}{{exclamationMarks}}</div>
-        <button @click="decrement">-</button>
-        <button @click="increment">+</button>
-    </div>
+<template lang="pug">
+    div
+        .greeting Hello {{name}}{{exclamationMarks}}
+        button(@click="decrement") -
+        button(@click="increment") +
 </template>
+
+<style lang="scss" scoped>
+    .greeting {
+        font-size: 20px;
+        button {
+            background-color: red;
+        }
+    }
+</style>
 
 <script lang="ts">
     import {Vue, Component, Prop} from "vue-property-decorator";
@@ -34,8 +42,3 @@
     }
 </script>
 
-<style>
-    .greeting {
-        font-size: 20px;
-    }
-</style>
