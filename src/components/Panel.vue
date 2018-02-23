@@ -10,7 +10,7 @@
             tr.target
                 th Target
                 td
-                    input(type="text",v-model="flaData.targetPath",@keyup="updateOption")
+                    input(type="text",v-model="flaData.targetPath",@keyup="targetPathUpdate")
 
             tr.list
                 td(colspan=2)
@@ -41,60 +41,60 @@
 
 </style>
 <script lang="ts">
+    /* globals document, window, JSON, require, CSInterface, CSEvent, SystemPath, VulcanInterface, VulcanMessage */
+
     import {Vue, Component, Prop, Watch} from "vue-property-decorator";
     import fl from "../fl";
+    import {fs} from "../index";
+
+    declare const SystemPath: any;
 
     @Component
     export default class Panel extends Vue {
         flaData: any = {};
         target: string = "hoge";
+        flaPath: string = "";
+        flaName: string = "";
 
-        updateOption() {
+        private watcher: any;
+
+        private updateOption() {
             fl.flaDataUpdate(this.flaData);
+        }
+
+        targetPathUpdate() {
+            if (this.watcher) this.watcher.close();
+
+//            let fs = eval("require('fs')");
+            let path = this.flaPath + this.flaData.targetPath;
+            try {
+                fs.accessSync(path);
+                let id = 0;
+                this.watcher = fs.watch(path, () => {
+                    clearTimeout(id);
+                    id = setTimeout(() => this.onTargetUpdate(), 500);
+                });
+            } catch (e) {
+                console.log("not file", path);
+            }
+
+            this.updateOption();
         }
 
         ssListUpdate() {
             let ssList: any[] = this.flaData.ssList;
-            if (ssList[ssList.length - 1].path != "") {
+            if (ssList.length == 0 || ssList[ssList.length - 1].path != "") {
                 ssList.push({path: ""});
             }
             this.updateOption();
         }
 
-//        @Watch("target")
-//        onTarget(newer, older) {
-//            fl.flaDataUpdate("targetPath", newer);
-//        }
+        onTargetUpdate() {
+            let v = fs.readFileSync(this.flaPath + this.flaData.targetPath, 'utf8');
+            console.log(v);
+        }
 
         set watch(v: boolean) {
-
-//            console.log(v);
         }
-
-        sslist: { path: string }[] = [
-            {path: "hogehoge"},
-            {path: "hogehoge"},
-            {path: "hogehoge"},
-            {path: "hogehoge"}
-        ];
-
-//        @Prop() name: string;
-//        @Prop() initialEnthusiasm: number;
-
-//        enthusiasm = this.initialEnthusiasm;
-
-        increment() {
-//            this.enthusiasm++;
-        }
-
-        decrement() {
-//            if (this.enthusiasm > 1) {
-//                this.enthusiasm--;
-//            }
-        }
-
-//        get exclamationMarks(): string {
-//            return Array(this.enthusiasm + 1).join('!');
-//        }
     }
 </script>

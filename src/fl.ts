@@ -1,3 +1,5 @@
+/* globals document, window, JSON, require, CSInterface, CSEvent, SystemPath, VulcanInterface, VulcanMessage */
+
 declare const CSInterface: any;
 
 export default class fl {

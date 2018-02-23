@@ -1,26 +1,26 @@
+/* globals document, window, JSON, require, CSInterface, CSEvent, SystemPath, VulcanInterface, VulcanMessage */
+
 import Vue from "vue";
 import HelloDecoratorComponent from "./components/HelloDecorator.vue";
 import PanelComponent from "./components/Panel.vue";
 import fl from "./fl";
 import * as Promise from "promise";
 
-declare const CSInterface: any;
 declare const themeManager: any;
-declare const SystemPath: any;
-declare const require: any;
-const CSIF: any = new CSInterface();
 
-// interface Window {
-//     e: any;
-// }
-//
-// window.e = function (js: string) {
-//     CSIF.evalScript(
-//         js, function (res: any) {
-//             console.log(res);
-//         }
-//     );
-// };
+interface Window {
+    fs: any;
+    e: any;
+}
+
+window.e = function (js: string) {
+    fl.CSIF.evalScript(
+        js, function (res: any) {
+            console.log(res);
+        }
+    );
+};
+export const fs = eval("require('fs')");
 
 class Main {
     static instance: Main;
@@ -31,14 +31,6 @@ class Main {
         Main.instance = this;
         this.appVue = new Vue({
             el: "#app",
-            // template: `
-            // <div>
-            //     <main-component />
-            //     Name: <input v-model="name" type="text">
-            //     <h1>Hello Decorator Component</h1>
-            //     <hello-decorator-component :name="name" :initialEnthusiasm="3" />
-            //     </div>
-            // `,
             data: {name: "World"},
             methods: {
                 reload: function () {
@@ -60,10 +52,10 @@ class Main {
 
         try {
             themeManager.init();
-            CSIF.evalScript("fl.trace('CreateJs Supporter v0.0.1')");
+            fl.CSIF.evalScript("fl.trace('CreateJs Supporter v0.0.1')");
             console.log('CreateJs Supporter v0.0.1');
             // CSIF.addEventListener("com.adobe.events.flash.selectionChanged", func);
-            CSIF.addEventListener("com.adobe.events.flash.documentChanged", (e: any) => this.documentChanged(e));
+            fl.CSIF.addEventListener("com.adobe.events.flash.documentChanged", (e: any) => this.documentChanged(e));
             // CSIF.addEventListener("com.adobe.events.flash.timelineChanged", func);
             // CSIF.addEventListener("com.adobe.events.flash.documentSaved", func);
             // CSIF.addEventListener("com.adobe.events.flash.documentOpened", func);
@@ -87,12 +79,19 @@ class Main {
 
     documentChanged(e: any) {
         console.log("documentChanged");
+
+
         Promise.all([
             fl.run(`
                 var dom=fl.getDocumentDOM();
-                if(!dom)"reject";
-            `)])
-            .then(() => this.setOptions())
+                dom?dom.path:"reject";
+            `),
+            fl.run(`dom.name`)])
+            .then((args) => {
+                this.panel.flaName = args[1];
+                this.panel.flaPath = args[0].replace(this.panel.flaName, "");
+                this.setOptions();
+            })
             .catch(() => {
                 // this.panel.flaData = {};
                 this.emptyOptions()
@@ -111,27 +110,20 @@ class Main {
                 if (!_flaData) _flaData = {};
 
                 if (!_flaData.ssList || !_flaData.ssList[0]) {
-                    _flaData.ssList = [
-                        {path: ""}
-                    ];
+                    _flaData.ssList = [];
                 }
-                if (_flaData.targetPath) {
-                    Vue.set(this.panel, "flaData", _flaData);
-                } else {
+                if (!_flaData.targetPath) {
                     // no setting
-                    fl.run(`dom.name`)
-                        .then((_name: string) => {
-                            _flaData.targetPath = _name.replace(/(.*)fla/, "$1js")
-
-                            Vue.set(this.panel, "flaData", _flaData);
-                        });
+                    _flaData.targetPath = this.panel.flaName.replace(/(.*)fla/, "$1js")
                 }
-
+                Vue.set(this.panel, "flaData", _flaData);
+                this.panel.targetPathUpdate();
+                this.panel.ssListUpdate();
             });
     }
 
     emptyOptions() {
-        // console.log(this.appVue)
+        console.log("emptyOptions")
         // this.panel.target = "";
     }
 }
