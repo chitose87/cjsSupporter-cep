@@ -1,0 +1,27 @@
+﻿{"frames": {
+
+"rect.png":
+{
+	"frame": {"x":0,"y":0,"w":121,"h":121},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":121},
+	"sourceSize": {"w":121,"h":121}
+},
+"triangle.png":
+{
+	"frame": {"x":0,"y":121,"w":181,"h":157},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":181,"h":157},
+	"sourceSize": {"w":181,"h":157}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "18.0.1.115",
+	"image": "rect-triangle.png",
+	"format": "RGBA8888",
+	"size": {"w":256,"h":512},
+	"scale": "1"
+}
+}

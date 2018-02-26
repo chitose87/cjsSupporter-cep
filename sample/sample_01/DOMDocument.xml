@@ -1,0 +1,81 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.96" creatorInfo="Adobe Animate CC" platform="Windows" versionInfo="Saved by Animate Windows 18.0 build 115" majorVersion="18" buildNumber="115" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="3CE50BB6-55CF-47A6-B591-01286DDDC64C" fileGUID="56148CE10DB86049A5424705223DAA33">
+     <media>
+          <DOMBitmapItem name="circle.png" itemID="5a8ff47b-00000246" sourceLastImported="1519383675" externalFileSize="2488" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="circle.png" bitmapDataHRef="M 23 1519383666.dat" frameRight="3820" frameBottom="3820"/>
+          <DOMBitmapItem name="embed0001.png" itemID="5a86b308-00000059" sourceLastImported="1518776899" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="embed0001.png" bitmapDataHRef="M 13 1518777096.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="embed0002.png" itemID="5a86b308-0000005d" sourceLastImported="1518776899" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="embed0002.png" bitmapDataHRef="M 14 1518777096.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="embed0003.png" itemID="5a86b308-00000061" sourceLastImported="1518776899" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="embed0003.png" bitmapDataHRef="M 15 1518777096.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="embed0004.png" itemID="5a86b308-00000065" sourceLastImported="1518776899" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="embed0004.png" bitmapDataHRef="M 16 1518777096.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="embed0005.png" itemID="5a86b308-00000069" sourceLastImported="1518776899" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="embed0005.png" bitmapDataHRef="M 17 1518777096.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="embed0006.png" itemID="5a86b308-0000006d" sourceLastImported="1518776899" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="embed0006.png" bitmapDataHRef="M 18 1518777096.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="embed0007.png" itemID="5a86b308-00000071" sourceLastImported="1518776899" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="embed0007.png" bitmapDataHRef="M 19 1518777096.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="embed0008.png" itemID="5a86b308-00000075" sourceLastImported="1518776899" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="embed0008.png" bitmapDataHRef="M 20 1518777096.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="embed0009.png" itemID="5a86b308-00000051" sourceLastImported="1518776899" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="embed0009.png" bitmapDataHRef="M 11 1518777096.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="embed0010.png" itemID="5a86b308-00000055" sourceLastImported="1518776899" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="embed0010.png" bitmapDataHRef="M 12 1518777096.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="rect.png" itemID="5a8ff459-00000238" sourceLastImported="1519383641" externalFileSize="361" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="rect.png" bitmapDataHRef="M 21 1519383630.dat" frameRight="2420" frameBottom="2420"/>
+          <DOMBitmapItem name="sprites0001.png" itemID="5a86b292-00000034" sourceLastImported="1518776920" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="sprites0001.png" bitmapDataHRef="M 4 1518776978.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="sprites0002.png" itemID="5a86b292-00000038" sourceLastImported="1518776920" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="sprites0002.png" bitmapDataHRef="M 5 1518776978.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="sprites0003.png" itemID="5a86b292-0000003c" sourceLastImported="1518776920" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="sprites0003.png" bitmapDataHRef="M 6 1518776978.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="sprites0004.png" itemID="5a86b292-00000040" sourceLastImported="1518776920" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="sprites0004.png" bitmapDataHRef="M 7 1518776978.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="sprites0005.png" itemID="5a86b292-00000044" sourceLastImported="1518776920" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="sprites0005.png" bitmapDataHRef="M 8 1518776978.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="sprites0006.png" itemID="5a86b292-00000048" sourceLastImported="1518776920" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="sprites0006.png" bitmapDataHRef="M 9 1518776978.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="sprites0007.png" itemID="5a86b292-0000004c" sourceLastImported="1518776920" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="sprites0007.png" bitmapDataHRef="M 10 1518776978.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="sprites0008.png" itemID="5a86b292-00000028" sourceLastImported="1518776920" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="sprites0008.png" bitmapDataHRef="M 1 1518776978.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="sprites0009.png" itemID="5a86b292-0000002c" sourceLastImported="1518776920" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="sprites0009.png" bitmapDataHRef="M 2 1518776978.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="sprites0010.png" itemID="5a86b292-00000030" sourceLastImported="1518776920" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="sprites0010.png" bitmapDataHRef="M 3 1518776978.dat" frameRight="2640" frameBottom="2640"/>
+          <DOMBitmapItem name="triangle.png" itemID="5a8ff46e-0000023f" sourceLastImported="1519383662" externalFileSize="1836" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="triangle.png" bitmapDataHRef="M 22 1519383649.dat" frameRight="3620" frameBottom="3140"/>
+     </media>
+     <symbols>
+          <Include href="cycle_mc.xml" loadImmediate="false" itemID="5a9384f6-00000108" lastModified="1519617270"/>
+          <Include href="embed.xml" loadImmediate="false" itemID="5a86b131-0000000b" lastModified="1518776858"/>
+          <Include href="rect_mc.xml" loadImmediate="false" itemID="5a9384df-000000fd" lastModified="1519617247"/>
+          <Include href="sprites.xml" loadImmediate="false" itemID="5a86b217-00000024" lastModified="1518776861"/>
+          <Include href="triangle_mc.xml" loadImmediate="false" itemID="5a9384e8-00000103" lastModified="1519617256"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="シーン 1">
+               <layers>
+                    <DOMLayer name="レイヤー_1" color="#00FFFF" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="rect_mc">
+                                             <matrix>
+                                                  <Matrix tx="74" ty="32"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="60.5" y="60.5"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="triangle_mc">
+                                             <matrix>
+                                                  <Matrix tx="282" ty="72"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="90.5" y="78.5"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="cycle_mc">
+                                             <matrix>
+                                                  <Matrix tx="83" ty="198"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="95.5" y="95.5"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <scripts>
+          <GlobalScripts language="Javascript"/>
+     </scripts>
+     <persistentData>
+          <PD n="cjsSupporter_data" v='{"ssList":[{"path":"../rect-triangle.json","status":200},{"path":"","status":200}],"targetPath":"../sample_01.js"}'/>
+          <PD n="CreateJSToolkit_timelinedata" v="version&#xA;0.1&#xA;loop&#xA;true"/>
+     </persistentData>
+     <PrinterSettings/>
+     <publishHistory/>
+</DOMDocument>
