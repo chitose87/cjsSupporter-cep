@@ -20,7 +20,8 @@ window.e = function (js: string) {
         }
     );
 };
-export const fs = eval("require('fs')");
+export const fs: any = eval("require('fs')");
+// export const che: any = eval("require('cheerio')");
 
 class Main {
     static instance: Main;

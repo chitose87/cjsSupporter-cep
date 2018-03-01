@@ -8,17 +8,19 @@
   </head>
   <body class="hostElt">
     <div id="app">
-      <p><span>build Time</span><span>11:58:26 GMT+0900 (東京 (標準時))</span></p>
+      <p><span>build Time</span><span>13:26:33 GMT+0900 (東京 (標準時))</span></p>
       <button class="hostFontSize" @click="reload">reload</button>
-      <button class="hostFontSize" @click="flaDataClear">flaDataClear</button>
+      <!--button.hostFontSize(@click="flaDataClear") flaDataClear-->
       <panel-component ref="panel"></panel-component>
     </div>
-    <div id="content">
-      <p><span>build Time</span><span>11:58:26 GMT+0900 (東京 (標準時))</span></p>
-      <div>
-        <button class="hostFontSize" id="btn_test">Call ExtendScript</button>
-      </div>
-    </div>
+    <!--#content
+    p
+        span build Time
+        span 13:26:33 GMT+0900 (東京 (標準時))
+    div
+        button#btn_test.hostFontSize Call ExtendScript
+    
+    -->
     <script src="js/libs/CSInterface.js"></script>
     <!--script(src='js/libs/jquery-2.0.2.min.js')-->
     <script src="js/themeManager.js"></script>

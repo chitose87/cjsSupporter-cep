@@ -1,6 +1,5 @@
 // Converted with cjsSupporter
-
-(function (cjs, an) {
+(function (cjs, an) {
 
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
@@ -112,9 +111,7 @@ lib.properties = {
 	fps: 24,
 	color: "#FFFFFF",
 	opacity: 1.00,
-	manifest: [
-	    {"src":"images/circle.png","id":"circle"}
-	    ,{"src":"rect-triangle.png","id":"rect-triangle"}],
+	manifest: [{"src":"images/circle.png","id":"circle"},{"src":"rect-triangle.png","id":"rect-triangle"}],
 	preloads: []
 };
 
