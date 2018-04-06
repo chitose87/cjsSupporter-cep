@@ -35,10 +35,10 @@ export default class fl {
         return new Promise(function (resolve: (arg: string) => void, reject: any) {
             try {
                 fl.CSIF.evalScript(jsfl, (e: any) => {
-                    e == "reject" ? reject() : resolve(e);
+                    e == "reject" ? reject("reject") : resolve(e);
                 });
             } catch (e) {
-                reject(e);
+                reject("reject");
             }
         });
     }
