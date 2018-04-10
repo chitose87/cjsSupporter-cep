@@ -89,20 +89,25 @@ class Main {
             fl.run(`dom?dom.exportPublishProfileString():"reject"`)
         ])
             .then((args) => {
+                console.log(args);
                 this.panel.flaName = args[0];
                 this.panel.flaPath = args[1].replace(this.panel.flaName, "");
                 // window.v = args[2];
-                console.log(args[2], args[2].match(/name="filename"*>(.+).js/)[1])
-                this.panel.targetPath = (/.xfl/.test(this.panel.flaName) ? "../" : "") + args[2].match(/name="filename"*>(.+).js/)[1] + ".js";
-                console.log("this.panel.targetPath", this.panel.targetPath);
+                // console.log(args[2], args[2].match(/name="filename"*>(.+).js/)[1])
+                let jsFilename = args[2].match(/name="filename"*>(.+).js/);
+                if (jsFilename) {
+                    this.panel.targetPath = (/.xfl/.test(this.panel.flaName) ? "../" : "") + jsFilename[1] + ".js";
+                }
+                // console.log("this.panel.targetPath", this.panel.targetPath);
                 this.setOptions();
             })
-            .catch(() => {
-                // this.panel.flaData = {};
-                // fl.CSIF.evalScript("fl.trace(dom.exportPublishProfileString())");
-
-                this.emptyOptions()
-            });
+        // .catch((e) => {
+        //     // this.panel.flaData = {};
+        //     // fl.CSIF.evalScript("fl.trace(dom.exportPublishProfileString())");
+        //     console.log(e);
+        //
+        //     this.emptyOptions()
+        // });
     }
 
     setOptions() {

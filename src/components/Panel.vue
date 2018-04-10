@@ -8,7 +8,7 @@
                     input(type="text",v-model="flaData.targetPath",@keyup="targetPathUpdate")
                 td(v-bind:data-status="targetPathStatus")
 
-            tr.hostBorderShadow
+            tr.hostBorder
                 th Merge list：
                 td(colspan=2).p-0
                     table
@@ -17,42 +17,74 @@
                                 input(type="text",placeholder="./${Sprite Sheet}.json",v-model="item.path",@keyup="ssListUpdate")
                             td(width="3em")(v-bind:data-status="item.status")
 
-            tr.hostBorderShadow.hostBorderHighlight
+            tr.hostBorder
                 th(width="auto") Watch：
                 td(width="auto")
                     input#hoge(type="checkbox",v-model="isWatch")
                 td(width="3em")
 
-            tr.hostBorderShadow.hostBorderHighlight
+            tr.hostBorder
                 th Deploy：
                 td
                     button.topcoat-button.hostFontSize(v-on:click="deploy") Deploy
                 td(width="3em")
-        //.info
-            a(href="https://www.adobeexchange.com/creativecloud.details.100252.html",target="_blank") >adobe exchange
-            a(href="https://github.com/chitose87/cjsSupporter-cep",target="_blank") >github
+        .info
+            a(v-on:click="openBrowser('https://www.adobeexchange.com/creativecloud.details.100252.html')") [addon page]
+            a(v-on:click="openBrowser('https://github.com/chitose87/cjsSupporter-cep')") [github project]
 
 </template>
 <style lang="scss" scoped>
     #Panel {
-        padding-top: 1em;
+        padding: 1em 0;
+    }
+
+    .hostBorder {
+        > * {
+            position: relative;
+            &:before, &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                left: 0;
+            }
+            &:before {
+                bottom: 1px;
+            }
+            &:after {
+                bottom: 0;
+            }
+        }
     }
 
     .info {
-        display: flex;
-        justify-content: space-between;
-        padding: 0.5em 0.5em;
+        padding: 1em;
         a {
             color: dimgray;
             text-decoration: none;
+            cursor: pointer;
+            margin-right: 1em;
         }
     }
 
     table {
         width: 100%;
         border-collapse: collapse;
+        tr {
+            padding: 0 0.5em;
+            position: relative;
+            &:before {
+                content: "";
+                display: block;
+                height: 1px;
+                /*background-color: red;*/
+                position: absolute;
+                width: 100%;
+            }
+        }
         th, td {
-            padding: 0.5em 0.5em;
+            padding: 0.75em 0.5em calc(0.75em + 2px);
             vertical-align: top;
         }
         th {
@@ -265,6 +297,17 @@ this.gotoAndStop(${index});
 
         get isWatch(): boolean {
             return this.flaData.isWatch;
+        }
+
+        openBrowser(url: string) {
+            let rootDir = "/";
+            let processPath = "/usr/bin/open";
+            let isWindows = window.navigator.platform.toLowerCase().indexOf("win") > -1;
+            if (isWindows) {
+                rootDir = fl.CSIF.getSystemPath(SystemPath.COMMON_FILES).substring(0, 3);
+                processPath = rootDir + "Windows/explorer.exe";
+            }
+            window.cep.process.createProcess(processPath, url);
         }
     }
 </script>

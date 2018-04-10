@@ -67,6 +67,7 @@ var themeManager = (function () {
      * Update the theme with the AppSkinInfo retrieved from the host product.
      */
     function updateThemeWithAppSkinInfo(appSkinInfo) {
+        console.log(appSkinInfo);
 
         var panelBgColor = appSkinInfo.panelBackgroundColor.color;
         var bgdColor = toHex(panelBgColor);
@@ -83,7 +84,7 @@ var themeManager = (function () {
             addRule(styleId, "input[type='text']", "color: #333333");
             addRule(styleId, "input[type='text']", "background-color: #A0A0A0");
             addRule(styleId, "input[type='text']", "border: 1px solid " + borderShadowColor);
-        }else{
+        } else {
             addRule(styleId, "input[type='text']", "color: #333333");
             addRule(styleId, "input[type='text']", "background-color: #EDEDED");
             addRule(styleId, "input[type='text']", "border: 1px solid " + borderShadowColor);
@@ -114,10 +115,13 @@ var themeManager = (function () {
         addRule(styleId, ".hostButton", "border-color: " + "#" + lightBgdColor);
 
         //self add
-        addRule(styleId, ".hostBorderHighlight", "border-top: 1px solid " + borderHighlightColor);
-        addRule(styleId, ".hostBorderShadow", "border-bottom: 1px solid " + borderShadowColor);
+        addRule(styleId, ".hostBorderHighlight >*", "border-top: 1px solid " + borderHighlightColor);
+        addRule(styleId, ".hostBorderHighlight >*", "border-top: 1px solid " + borderHighlightColor);
+        addRule(styleId, ".hostBorderShadow >*", "border-bottom: 1px solid " + borderShadowColor);
+        addRule(styleId, ".hostBorderShadow >*", "border-bottom: 1px solid " + borderShadowColor);
 
-
+        addRule(styleId, ".hostBorder >*:before", "background-color:" + borderShadowColor);
+        addRule(styleId, ".hostBorder >*:after", "background-color:" + borderHighlightColor);
     }
 
 

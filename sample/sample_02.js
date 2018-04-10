@@ -1,9 +1,8 @@
-// Converted with cjsSupporter
-(function (cjs, an) {
+(function (cjs, an) {
 
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
-lib.ssMetadata = [{"name":"rect-triangle","frames":[[0,0,121,121],[0,121,181,157]]}];
+lib.ssMetadata = [];
 
 
 // symbols:
@@ -17,17 +16,15 @@ p.nominalBounds = new cjs.Rectangle(0,0,191,191);
 
 
 (lib.rect = function() {
-this.spriteSheet = ss["rect-triangle"];
-this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.rect);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,121,121);
 
 
 (lib.triangle = function() {
-this.spriteSheet = ss["rect-triangle"];
-this.gotoAndStop(1);
-}).prototype = p = new cjs.Sprite();
-// helper functions:
+	this.initialize(img.triangle);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,181,157);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
@@ -83,7 +80,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 
 // stage content:
-(lib.sample_01 = function(mode,startPosition,loop) {
+(lib.sample_02 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// レイヤー_1
@@ -111,7 +108,11 @@ lib.properties = {
 	fps: 24,
 	color: "#FFFFFF",
 	opacity: 1.00,
-	manifest: [{"src":"images/circle.png","id":"circle"},{"src":"img/hoge/rect-triangle.png","id":"rect-triangle"}],
+	manifest: [
+		{src:"images/circle.png", id:"circle"},
+		{src:"images/rect.png", id:"rect"},
+		{src:"images/triangle.png", id:"triangle"}
+	],
 	preloads: []
 };
 

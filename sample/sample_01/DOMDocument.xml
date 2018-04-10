@@ -16,7 +16,7 @@
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="rect_mc">
+                                        <DOMSymbolInstance libraryItemName="rect_mc" locked="true">
                                              <matrix>
                                                   <Matrix tx="74" ty="32"/>
                                              </matrix>
@@ -24,7 +24,7 @@
                                                   <Point x="60.5" y="60.5"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="triangle_mc">
+                                        <DOMSymbolInstance libraryItemName="triangle_mc" locked="true">
                                              <matrix>
                                                   <Matrix tx="282" ty="72"/>
                                              </matrix>
@@ -32,7 +32,7 @@
                                                   <Point x="90.5" y="78.5"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="cycle_mc">
+                                        <DOMSymbolInstance libraryItemName="cycle_mc" locked="true">
                                              <matrix>
                                                   <Matrix tx="83" ty="198"/>
                                              </matrix>
@@ -51,7 +51,7 @@
           <GlobalScripts language="Javascript"/>
      </scripts>
      <persistentData>
-          <PD n="cjsSupporter_data" v='{"ssList":[{"path":"../rect-triangle.json","status":200},{"path":"","status":0}],"targetPath":"../sample_01.js"}'/>
+          <PD n="cjsSupporter_data" v='{"ssList":[{"path":"../img/hoge/rect-triangle.json","status":200},{"path":"","status":0}],"targetPath":"../sample_01.js","isWatch":true}'/>
           <PD n="CreateJSToolkit_timelinedata" v="version&#xA;0.1&#xA;loop&#xA;true"/>
      </persistentData>
      <PrinterSettings/>

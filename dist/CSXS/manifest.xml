@@ -2,7 +2,7 @@
 <ExtensionManifest
         Version="7.0"
         ExtensionBundleId="chitose.net.cjsSupporter"
-        ExtensionBundleVersion="1.0.0"
+        ExtensionBundleVersion="1.0.1"
         ExtensionBundleName="cjsSupporter"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <ExtensionList>
